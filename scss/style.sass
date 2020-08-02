@@ -7,7 +7,7 @@
 /***************/
 // Style
 body
-  // cursor: none
+  cursor: none
   background: $background
 a
   cursor: none
@@ -29,7 +29,7 @@ h2
   position: relative
   display: grid
   &:before
-    content:""
+    content: " "
     background: $yellow
     width: 80%
     height: 24px
@@ -73,7 +73,7 @@ header
     padding: 0 1rem
   .logo
     flex: .5
-    svg
+    img
       width: 72px
       height: 72px
       @include mobile-portrait
@@ -217,7 +217,7 @@ header
           margin-top: 16px
           margin-left: 24px
           &:before
-            content:""
+            content: " "
             width: 16px
             height: 16px
             display: block
@@ -234,8 +234,6 @@ header
           margin: 8px 0
           border: 6px $white solid
           border-radius: 24px
-        svg
-          align-self: center
         p.desc
           font-size: 16px
           font-weight: 200
@@ -278,31 +276,47 @@ header
     grid-row-start: 4
     color: $white
     margin-top: 32px
+    height: 100vh
     .briefcase
       display: grid
-      grid-template-rows: 32px 0.5fr 1fr 1fr 1fr 32px
-      grid-template-columns: repeat(16, 1fr)
+      grid-template-rows: 54px 0.5fr 1fr 1fr 1fr 32px
+      grid-template-columns: 144px repeat(15, 1fr)
       background: linear-gradient(0deg, #000000 0%, #252525 100%)
       border-radius: 40px
       border: 6px solid #F6F3E7
       height: 95vh
       margin: 32px 0px
       box-shadow: $shadow
+      // opacity: 0
+      overflow: hidden
+      .blob-1
+        grid-column: 1/8
+        grid-row: 1/4
+        // position: absolute
+        width: 150%
+        height: auto
+        align-self: flex-end
+        justify-self: flex-end
+        // top: -450px 
+        // left: -200px 
+        z-index: 0
+        opacity: 0.8
       .header
         grid-row: 2 / 3
         grid-column: 2 / 15
+        z-index: 2
         .p-name
-          font-size: 48px
+          font-size: 36px
           text-transform: uppercase
           &:after
-            content:""
+            content: " "
             width: 32px
             height: 32px
             display: block
             background: url(../img/cross-white.svg)
-            top: -40px
+            top: -36px
             position: relative
-            left: -48px
+            left: -72px
         .company
           font-weight: 800
           margin-top: 16px
@@ -315,6 +329,7 @@ header
         grid-row: 3 / 6
         grid-column: 2 / 6
         margin-top: 64px
+        z-index: 2
         .p-desc
           font-family: $body-font
           font-size: 18px

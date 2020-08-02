@@ -34,9 +34,15 @@ headtitle.addEventListener('mouseleave',() =>{
 
 // Animations
 
-gsap.to('.briefcase',{
-  scrollTrigger: '.briefcase',
-  x: 500,
-  markers: true,
-  scrub: true
-})
+// gsap.to('.projects',{
+//   scrollTrigger: {
+//     trigger: '.briefcase',
+//     start: "top center",
+//     end:"center center",
+//     toggleActions:"restart pause reverse pause",
+//     markers: true,
+//     scrub: true,
+//   },
+//   y: -20,
+//   opacity: 1,
+// })
