@@ -13,6 +13,8 @@ a
   // cursor: none
   transform-origin: 100% 100%
   color: $dark-grey 
+h1,h2,h3,h4,h5,h6 
+  color: $dark-grey
 .subtitle
     grid-column: 2/7
     grid-row: 2/3
@@ -44,6 +46,9 @@ h3
   z-index: 1
 h4
   font-size: 24px
+  font-family: $title-font
+  font-weight: 800
+h5
   font-family: $title-font
 .fun
   font-size: 18px
@@ -353,13 +358,47 @@ header
             .title
               font-weight: 600
               font-size: 18px
+              color: $white
             .desc
               font-size: 16px
               font-weight: 200
               line-height: 24px
               margin-top: 8px
-
-
+footer
+  display: grid
+  grid-template-columns: 1fr 380px 1fr
+  grid-template-rows: 48px 1fr 1fr 1fr 64px 24px
+  text-align: center
+  h4 
+    grid-column: 2/3
+    grid-row: 2/3
+  .links
+    grid-column: 2/3
+    grid-row: 3/4
+    a
+      margin: 8px
+  .fun
+    grid-column: 2/3
+    grid-row: 4/5
+    margin-top: 16px
+    text-align: center
+    font-size: 14px
+  .credits //yup I just stole all the logos from their sites
+    grid-column: 2/3
+    grid-row: 5/6
+    display: flex
+    align-items: center
+    justify-self: center
+    h5
+      font-weight: 800 
+    .icon
+      height: 16px
+      margin: 8px
+  .source
+    grid-column: 2/3
+    grid-row: 6/7
+    font-family: $accent-font
+    font-size: 12px
 // FX
 
 .glitch // glitch Text

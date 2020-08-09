@@ -26,7 +26,7 @@ body
       .glare
   header
     .logo
-      img(src="/img/logo.svg")
+      img(src="/img/logo.svg" alt="pizza illuminati with some horns illustration")
     .hi-there
       h5.hi  Hello, I'm 
       h1  Sebastián Zúñiga    
@@ -53,8 +53,7 @@ body
       p.desc Actually based in #[a(href="https://footprints.zen.ly/dactrtr") somewhere], working remotely for #[a(href="http://www.elun.cl") Elun].
       p.desc Previously at #[a(href="https://www.mckinsey.com/") Mckinsey Chile] and #[a(href="https://dena.com/intl/") DeNA Chile] 
     .profile
-      img.avatar(src="../how/img/profile.jpg")
-      img.avatar(src="img/profile.jpg")
+      img.avatar(src="img/profile.jpg" alt="Picture of me holding my phone in Ukraine, next to a wall full of illustrations about internet and technology")
       span
 
   section.how
@@ -64,7 +63,7 @@ body
     .skills
       ul.skill-list
         li 
-          img.img(src="/img/ui.svg")
+          img.img(src="/img/ui.svg" alt="Skeleton hand with a phone illustration")
           h3.list UI Design
           p.desc Sketch is my main tool at the moment, to make delightful and useful groups of pixels for those high end pieces of glass that's lives in everyone pockets, you know smartphones.
           p #[strong Current tools]:
@@ -76,7 +75,7 @@ body
             li
               a(href="https://principleformac.com/") Principle
         li
-          img.img(src="/img/illu.svg")
+          img.img(src="/img/illu.svg" alt="Skeleton hadn with and apple pencil swirling  illustration")
           h3.list Illustration
           p.desc Sometimes I like to draw stuff, and pretty much in every project try to add some fun little character to give a little more "wowowowowo effect".
           p #[strong Current tools]:
@@ -88,7 +87,7 @@ body
             li
               a(href="https://procreate.art/") Procreate
         li 
-          .img
+          img.img(src="/img/code.svg" alt="Skeleton hand in a rocking pose with a terminal screen around, like a flag illustration")
           h3.list Coding
           p.desc Yes, I like to code. I built my first website when I was 14 (21 years ago) in plain HTML and since then never stopped to read and learn about "coding", actually I'm working using Vue and learning SwiftUI.
           p #[strong Current tools]:
@@ -107,8 +106,9 @@ body
     
     ul.projects
       li.briefcase
-        img(src="/img/blob1.svg").blob-1
-        img(src="img/projects/notros.png").screen
+        img(src="/img/blob1.svg" alt="blob").blob-1
+        img(src="/img/blob1.svg" alt="blob").blob-2
+        img(src="img/projects/notros.png" alt="Notros screenshot").screen
         .header
           h3.p-name.
             Notros
@@ -180,19 +180,40 @@ body
       
       
   footer
+    h4 You can find me at:
     .links
-      a(href="") twitter
-      a(href="") linkedin
-      a(href="") instagram
-      a(href="") medium
+      a(href="https://twitter.com/dctrtr")
+        img(src="/img/icon-tw.svg" alt="Twitter logo illustration")
+      a(href="https://www.instagram.com/dactrtr.svg/")
+        img(src="/img/icon-ig.svg" alt="Instagram logo illustration")
+      a(href="https://www.linkedin.com/in/dactrtr/")
+        img(src="/img/icon-lkn.svg" alt="Linkedin logo illustration")
+      a(href="https://github.com/dactrtr")
+        img(src="/img/icon-github.svg" alt="Github logo illustration")
+      a(href="https://medium.com/@dactrtr")
+        img(src="/img/icon-medium.svg" alt="Medium logo illustration")
+    p.fun ...and pretty much other place as Dactrtr
+    .credits
+      h5 Built with:
+      a(href="https://www.sketch.com/")
+        img.icon(src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1200px-Sketch_Logo.svg.png" alt="sketch link")
+      a(href="https://github.com/pugjs/pug") 
+        img.icon(src="https://camo.githubusercontent.com/a43de8ca816e78b1c2666f7696f449b2eeddbeca/68747470733a2f2f63646e2e7261776769742e636f6d2f7075676a732f7075672d6c6f676f2f656563343336636565386664396431373236643738333963626539396431663639343639326330632f5356472f7075672d66696e616c2d6c6f676f2d5f2d636f6c6f75722d3132382e737667" alt="pugjs link")
+      a(href="https://sass-lang.com/")
+        img.icon(src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass link")
+      a(href="https://pages.github.com/")  
+        img.icon(src="/img/githubpages.svg" alt="github link")
+        
+      a(href="https://www.greensock.com/")  
+        img.icon(src="img/gsap.svg" alt="greensock link")
+    .source
+      p 2020
 
-    p.credits
-      
-  
+
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js')
   script(src='crazycode.js')
-  script(src='animation.js')
+  //- script(src='animation.js')
   
 
         

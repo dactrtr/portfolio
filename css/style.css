@@ -562,6 +562,10 @@ a {
   color: #333;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
 .subtitle {
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -617,6 +621,11 @@ h3 {
 
 h4 {
   font-size: 24px;
+  font-family: "SourceSerif";
+  font-weight: 800;
+}
+
+h5 {
   font-family: "SourceSerif";
 }
 
@@ -1174,6 +1183,7 @@ header nav ul.nav-links a {
 .what ul.projects .briefcase .content .roles .single .title {
   font-weight: 600;
   font-size: 18px;
+  color: #ffffff;
 }
 
 .what ul.projects .briefcase .content .roles .single .desc {
@@ -1181,6 +1191,86 @@ header nav ul.nav-links a {
   font-weight: 200;
   line-height: 24px;
   margin-top: 8px;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 380px 1fr;
+      grid-template-columns: 1fr 380px 1fr;
+  -ms-grid-rows: 48px 1fr 1fr 1fr 64px 24px;
+      grid-template-rows: 48px 1fr 1fr 1fr 64px 24px;
+  text-align: center;
+}
+
+footer h4 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+footer .links {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+footer .links a {
+  margin: 8px;
+}
+
+footer .fun {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .credits {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+}
+
+footer .credits h5 {
+  font-weight: 800;
+}
+
+footer .credits .icon {
+  height: 16px;
+  margin: 8px;
+}
+
+footer .source {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+  font-family: "Shnobel";
+  font-size: 12px;
 }
 
 .glitch {
