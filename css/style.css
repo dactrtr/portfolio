@@ -1029,7 +1029,7 @@ header nav ul.nav-links a {
   padding: 4px 8px;
   background: rgba(255, 174, 1, 0.8);
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
   font-weight: bold;
   border-radius: 6px;
   width: auto;
@@ -1039,7 +1039,7 @@ header nav ul.nav-links a {
 }
 
 .how .skills ul.skill-list li ul.skills-list li a:hover {
-  color: #000;
+  background: #2EB5FB;
 }
 
 .what {
