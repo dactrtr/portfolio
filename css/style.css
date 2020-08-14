@@ -867,6 +867,10 @@ header nav ul.nav-links a {
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .who .profile img.avatar {
@@ -1062,7 +1066,9 @@ header nav ul.nav-links a {
       grid-row-start: 4;
   color: #ffffff;
   margin-top: 32px;
-  height: 100vh;
+  height: auto;
+  width: auto;
+  justify-items: center;
 }
 
 .what ul.projects .briefcase {
@@ -1077,6 +1083,7 @@ header nav ul.nav-links a {
   border-radius: 40px;
   border: 6px solid #F6F3E7;
   height: 95vh;
+  width: 95vw;
   margin: 32px 0px;
   -webkit-box-shadow: rgba(144, 115, 150, 0.3) 0px 0px 10px;
           box-shadow: rgba(144, 115, 150, 0.3) 0px 0px 10px;
@@ -1096,7 +1103,21 @@ header nav ul.nav-links a {
       align-self: flex-end;
   justify-self: flex-end;
   z-index: 0;
-  opacity: 0.8;
+  opacity: 0.5;
+}
+
+.what ul.projects .briefcase .blob-2 {
+  grid-column: -1/-8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  width: 150%;
+  height: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 .what ul.projects .briefcase .screen {
@@ -1110,6 +1131,7 @@ header nav ul.nav-links a {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-left: 124px;
+  z-index: 3;
 }
 
 .what ul.projects .briefcase .header {
@@ -1123,6 +1145,7 @@ header nav ul.nav-links a {
 }
 
 .what ul.projects .briefcase .header .p-name {
+  color: #ffffff;
   font-size: 36px;
   text-transform: uppercase;
 }
@@ -1139,6 +1162,7 @@ header nav ul.nav-links a {
 }
 
 .what ul.projects .briefcase .header .company {
+  color: #ffffff;
   font-weight: 800;
   margin-top: 16px;
 }
@@ -1181,8 +1205,9 @@ header nav ul.nav-links a {
 }
 
 .what ul.projects .briefcase .content .roles .single .title {
+  font-family: "SourceSerif";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff;
 }
 
@@ -1196,6 +1221,7 @@ header nav ul.nav-links a {
 footer {
   display: -ms-grid;
   display: grid;
+  margin-top: 328px;
   -ms-grid-columns: 1fr 380px 1fr;
       grid-template-columns: 1fr 380px 1fr;
   -ms-grid-rows: 48px 1fr 1fr 1fr 64px 24px;
@@ -1253,7 +1279,8 @@ footer .credits {
   justify-self: center;
 }
 
-footer .credits h5 {
+footer .credits p {
+  font-family: "SourceSerif";
   font-weight: 800;
 }
 

@@ -172,6 +172,8 @@ header
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: 1fr 1fr 1fr
+    justify-items: center
+    align-items: center
     img.avatar
       width: 400px
       height: auto
@@ -282,7 +284,9 @@ header
     grid-row-start: 4
     color: $white
     margin-top: 32px
-    height: 100vh
+    height: auto
+    width: auto
+    justify-items: center
     .briefcase
       display: grid
       grid-template-rows: 54px 0.5fr 1fr 1fr 1fr 32px
@@ -291,33 +295,43 @@ header
       border-radius: 40px
       border: 6px solid #F6F3E7
       height: 95vh
+      width: 95vw
       margin: 32px 0px
       box-shadow: $shadow
-      // opacity: 0
       overflow: hidden
       .blob-1
         grid-column: 1/8
         grid-row: 1/4
-        // position: absolute
         width: 150%
         height: auto
         align-self: flex-end
         justify-self: flex-end
-        // top: -450px 
-        // left: -200px 
         z-index: 0
-        opacity: 0.8
+        opacity: 0.5
+      .blob-2
+        grid-column: -1/-8
+        grid-row: 1/4
+        width: 150%
+        height: auto
+        align-self: flex-end
+        justify-self: flex-end
+        z-index: 0
+        opacity: 0.5
       .screen
         grid-column: 7/17
         grid-row: 3/6
         width: 100%
         align-self: flex-end
         margin-left: 124px
+        z-index: 3
+      .notros-screen
+        
       .header
         grid-row: 2 / 3
         grid-column: 2 / 15
         z-index: 2
         .p-name
+          color: $white
           font-size: 36px
           text-transform: uppercase
           &:after
@@ -330,6 +344,7 @@ header
             position: relative
             left: -72px
         .company
+          color: $white
           font-weight: 800
           margin-top: 16px
         .year
@@ -356,8 +371,9 @@ header
             margin-top: 32px
             font-family: $body-font
             .title
+              font-family: $title-font
               font-weight: 600
-              font-size: 18px
+              font-size: 20px
               color: $white
             .desc
               font-size: 16px
@@ -366,6 +382,7 @@ header
               margin-top: 8px
 footer
   display: grid
+  margin-top: 328px
   grid-template-columns: 1fr 380px 1fr
   grid-template-rows: 48px 1fr 1fr 1fr 64px 24px
   text-align: center
@@ -389,7 +406,8 @@ footer
     display: flex
     align-items: center
     justify-self: center
-    h5
+    p
+      font-family: $title-font
       font-weight: 800 
     .icon
       height: 16px

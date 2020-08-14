@@ -28,9 +28,9 @@ body
     .logo
       img(src="/img/logo.svg" alt="pizza illuminati with some horns illustration")
     .hi-there
-      h5.hi  Hello, I'm 
+      p.hi  Hello, I'm 
       h1  Sebastián Zúñiga    
-      h5.more-less  more or less known also as 
+      p.more-less  more or less known also as 
     a(href="http://dactrtr.rocks").blog Dactrtr
     nav
       ul.nav-links
@@ -43,7 +43,7 @@ body
   section.who
     .subtitle
       h2  DACTRTR... who?
-      h5.fun  Don't mind, just call me Seb
+      p.fun  Don't mind, just call me Seb
     .who-is
       p.desc.
         Hi, I'm #[strong Sebastián Zúñiga], #[a(href="https://www.linkedin.com/in/dactrtr/") UI designer] and #[a(href="https://www.instagram.com/dactrtr.svg/") Illustrator], always looking for the new "tech kid on the block", researching to improve my work, or developing (I also like to#[a(href="https://github.com/dactrtr") code]) new skills. I'm the serious looking funny guy at every place and the designer that is in the middle of the developers talking like one more of the pack.
@@ -59,7 +59,7 @@ body
   section.how
     .subtitle
       h2  Sk1llz
-      h5.fun ~Actually my mains skill is Learning, but everyone loves to read those below~
+      p.fun ~Actually my mains skill is Learning, but everyone loves to read those below~
     .skills
       ul.skill-list
         li 
@@ -102,13 +102,14 @@ body
   section.what
     .subtitle
       h2 PROJ3CTS
-      h5.fun All those skills and tools on the move.
+      p.fun All those skills and tools on the move.
     
     ul.projects
-      li.briefcase
+
+      li.briefcase.notros
         img(src="/img/blob1.svg" alt="blob").blob-1
-        img(src="/img/blob1.svg" alt="blob").blob-2
-        img(src="img/projects/notros.png" alt="Notros screenshot").screen
+        img(src="/img/blob2.svg" alt="blob").blob-2
+        img(src="img/projects/notros.png" alt="Notros screenshot").screen.notros-screen
         .header
           h3.p-name.
             Notros
@@ -126,61 +127,63 @@ body
                   p.desc.
                     Created a scalable and highly customizable foundation in Sketch, with an atomic design approach setting the foundations for a design system, with a control version in Abstract, Translated the designs into code using VUE, SASS, and HTML. This was my first time using VUE
                 li.single
-                  p.title.
+                  h5.title.
                     Achievements
                   p.desc.
                     Deeper my knowledge in front end, learn the basis of VUE, and create more than a "dribbbleish" design, a robust foundation for a design system, by myself.
       
-      //- li.briefcase
-      //-   img(src="/img/blob1.svg").blob-1
-      //-   .header
-      //-     h3.p-name.
-      //-       Mckinsey & Co
-      //-     h4.company.
-      //-       Several Clients
-      //-     p.year.
-      //-       2017
-      //-   .content
-      //-     p.p-desc.
-      //-       Not much to show because if you are of the 50% of the population that know Mckinsey you will now that they are pretty "private" with the clients and projects.
-      //-     ul.roles
-      //-           li.single
-      //-             h5.title.
-      //-               Visual Designer
-      //-             p.desc.
-      //-               Helped our clients to adopt the basis of a design system and in a few cases help the design teams to move to more modern tools such as Sketch and principle to improve their design process.
-      //-           li.single
-      //-             p.title.
-      //-               Achievements
-      //-             p.desc.
-      //-               Worked hand to hand or should I say "pixel to pixel" with the most talented people in the industry, for big companies as banks and telcos.
-      //- li.briefcase
-      //-   img(src="/img/blob1.svg").blob-1
-      //-   .header
-      //-     h3.p-name.
-      //-       Braveup 
-      //-     h4.company.
-      //-       Braveup
-      //-     p.year.
-      //-       2014
-      //-   .content
-      //-     p.p-desc.
-      //-       Braveup is an organization that prevents, teaches, and minimizes the issues with bullying and cyberbullying at schools
-      //-     ul.roles
-      //-           li.single
-      //-             h5.title.
-      //-               UI Designer
-      //-             p.desc.
-      //-               During the early stages of Braveup, designed and coded a iOS prototype(obj-c) to speech and show the development team a closer version than just a invision prototype.
-      //-           li.single
-      //-             p.title.
-      //-               Achievements
-      //-             p.desc.
-      //-               Took the "leap of faith" and do a functional prototype in a completely unknown language (for me) and managed to make it.
+      li.briefcase.mck
+        img(src="/img/blob1.svg" alt="blob").blob-1
+        img(src="/img/blob1.svg" alt="blob").blob-2
+        img(src="img/projects/notros.png" alt="Notros screenshot").screen.mck-screen
+        .header
+          h3.p-name.
+            Mckinsey & Co.
+          p.year.
+            2019-2020
+        .content
+          p.p-desc.
+            Notros is a tool that helps managers and marketers to maintain and give users contextual communication, with location-aware technology without installing any app.
+          ul.roles
+                li.single
+                  h5.title.
+                    UI Designer / Frontend
+                  p.desc.
+                    Created a scalable and highly customizable foundation in Sketch, with an atomic design approach setting the foundations for a design system, with a control version in Abstract, Translated the designs into code using VUE, SASS, and HTML. This was my first time using VUE
+                li.single
+                  h5.title.
+                    Achievements
+                  p.desc.
+                    Deeper my knowledge in front end, learn the basis of VUE, and create more than a "dribbbleish" design, a robust foundation for a design system, by myself.
       
+      li.briefcase.braveup
+        img(src="/img/blob1.svg" alt="blob").blob-1
+        img(src="/img/blob1.svg" alt="blob").blob-2
+        img(src="img/projects/notros.png" alt="Notros screenshot").screen.braveup-screen
+        .header
+          h3.p-name.
+            Brave-up
+          p.year.
+            2019-2020
+        .content
+          p.p-desc.
+            Notros is a tool that helps managers and marketers to maintain and give users contextual communication, with location-aware technology without installing any app.
+          ul.roles
+                li.single
+                  h5.title.
+                    UI Designer / Frontend
+                  p.desc.
+                    Created a scalable and highly customizable foundation in Sketch, with an atomic design approach setting the foundations for a design system, with a control version in Abstract, Translated the designs into code using VUE, SASS, and HTML. This was my first time using VUE
+                li.single
+                  h5.title.
+                    Achievements
+                  p.desc.
+                    Deeper my knowledge in front end, learn the basis of VUE, and create more than a "dribbbleish" design, a robust foundation for a design system, by myself.
+      
+
       
   footer
-    h4 You can find me at:
+    h2 You can find me at:
     .links
       a(href="https://twitter.com/dctrtr")
         img(src="/img/icon-tw.svg" alt="Twitter logo illustration")
@@ -194,7 +197,7 @@ body
         img(src="/img/icon-medium.svg" alt="Medium logo illustration")
     p.fun ...and pretty much other place as Dactrtr
     .credits
-      h5 Built with:
+      p Built with:
       a(href="https://www.sketch.com/")
         img.icon(src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1200px-Sketch_Logo.svg.png" alt="sketch link")
       a(href="https://github.com/pugjs/pug") 
@@ -212,8 +215,10 @@ body
 
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/mailgo@latest/dist/mailgo.min.js')
+  
   script(src='crazycode.js')
-  //- script(src='animation.js')
+  script(src='animation.js')
   
 
         
