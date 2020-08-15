@@ -448,7 +448,15 @@ footer
   grid-template-rows: 48px 1fr 1fr 1fr 64px 24px
   text-align: center
   @include mobile-portrait
+  margin-top: 120px
     grid-template-columns: 8px 1fr 8px
+    grid-template-rows: 48px 1fr 1fr 1fr 80px 64px
+    height: auto
+  .title
+    @include mobile-portrait
+      grid-column: 2/3
+      grid-row: 1/2
+      font-size: 2.2rem
   h4 
     grid-column: 2/3
     grid-row: 2/3
@@ -469,9 +477,18 @@ footer
     display: flex
     align-items: center
     justify-self: center
+    @include mobile-portrait
+      display: flex
+      flex-wrap: wrap
     p
       font-family: $title-font
       font-weight: 800 
+      @include mobile-portrait
+        width: 100%
+        flex-grow: 2
+    a
+      @include mobile-portrait
+        flex-grow: 1
     .icon
       height: 16px
       margin: 8px
@@ -480,6 +497,9 @@ footer
     grid-row: 6/7
     font-family: $accent-font
     font-size: 12px
+    display: flex
+    justify-content: center
+    align-items: center
 // FX
 
 .glitch // glitch Text
