@@ -609,11 +609,12 @@ h2 {
   position: relative;
   display: -ms-grid;
   display: grid;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 320px) and (orientation: portrait) {
   h2 {
-    font-size: 36px;
+    font-size: 48px;
   }
 }
 
@@ -1035,10 +1036,6 @@ header nav ul.nav-links a {
   }
 }
 
-.how h2 {
-  width: 120px;
-}
-
 .how h2:before {
   left: 16px;
 }
@@ -1096,6 +1093,9 @@ header nav ul.nav-links a {
   -ms-flex-preferred-size: 28%;
       flex-basis: 28%;
   font-family: "Inter var";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 8px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1134,13 +1134,19 @@ header nav ul.nav-links a {
   width: 320px;
   height: 250px;
   background: white;
-  display: block;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: 8px 0;
   border: 6px #ffffff solid;
   border-radius: 24px;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill .img {
+    width: 160px;
+    height: auto;
+  }
 }
 
 .how .skills ul.skill-list li.skill p.desc {
@@ -1180,6 +1186,7 @@ header nav ul.nav-links a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
   }
 }
 
@@ -1398,10 +1405,18 @@ footer {
   -ms-grid-rows: 48px 1fr 1fr 1fr 64px 24px;
       grid-template-rows: 48px 1fr 1fr 1fr 64px 24px;
   text-align: center;
-  margin-top: 120px;
-  margin-top-grid-template-columns: 8px 1fr 8px;
-  margin-top-grid-template-rows: 48px 1fr 1fr 1fr 80px 64px;
-  margin-top-height: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  footer {
+    margin-top: 120px;
+    -ms-grid-columns: 8px 1fr 8px;
+        grid-template-columns: 8px 1fr 8px;
+    -ms-grid-rows: 48px 1fr 1fr 1fr 80px 64px;
+        grid-template-rows: 48px 1fr 1fr 1fr 80px 64px;
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 320px) and (orientation: portrait) {
@@ -1635,15 +1650,13 @@ footer .source {
 .cursor {
   width: 1.5rem;
   height: 1.5rem;
-  border: 3px solid #000000;
+  border: 3px solid #ffffff;
   border-radius: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  background: rgba(0, 10, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: #ffaf00;
   z-index: 3;
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;

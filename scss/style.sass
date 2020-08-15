@@ -33,8 +33,9 @@ h2
   z-index: 1
   position: relative
   display: grid
+  text-transform: uppercase
   @include mobile-portrait
-    font-size: 36px
+    font-size: 48px
   &:before
     content: " "
     background: $yellow
@@ -241,7 +242,7 @@ header
     @include mobile-portrait
       grid-column: 2/3
   h2
-    width: 120px
+    // width: 120px
     &:before
       left: 16px
   .fun
@@ -266,7 +267,7 @@ header
       li.skill
         flex-basis: 28%
         font-family: $body-font
-        // display: flex
+        display: flex
         padding: 8px
         flex-direction: column
         align-items: flex-start
@@ -290,11 +291,13 @@ header
           width: 320px
           height: 250px
           background: white
-          display: block
           align-self: center
           margin: 8px 0
           border: 6px $white solid
           border-radius: 24px
+          @include mobile-portrait
+            width: 160px
+            height: auto
         p.desc
           font-size: 1rem
           font-weight: 200
@@ -311,6 +314,7 @@ header
           margin-top: 8px
           @include mobile-portrait
             flex-direction: row
+            width: 100%
           a
             margin: 2px
             padding: 4px 8px
@@ -447,8 +451,9 @@ footer
   grid-template-columns: 1fr 380px 1fr
   grid-template-rows: 48px 1fr 1fr 1fr 64px 24px
   text-align: center
+  width: 100%
   @include mobile-portrait
-  margin-top: 120px
+    margin-top: 120px
     grid-template-columns: 8px 1fr 8px
     grid-template-rows: 48px 1fr 1fr 1fr 80px 64px
     height: auto
@@ -538,13 +543,12 @@ footer
 .cursor // custom cursor
   width: 1.5rem
   height: 1.5rem
-  border: 3px solid #000000
+  border: 3px solid $white
   border-radius: 50%
   position: absolute
   transform: translate(-50%, -50%)
   pointer-events: none
-  background: rgba(0,10,0,0.2)
-  backdrop-filter: blur(10px)
+  background: rgba(255,175,0,1)
   z-index: 3
   transition: all 0.1s ease-in
   transition-property: background, transform, border
