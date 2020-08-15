@@ -556,6 +556,18 @@ body {
   background: #fff;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 a {
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
@@ -599,6 +611,12 @@ h2 {
   display: grid;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  h2 {
+    font-size: 36px;
+  }
+}
+
 h2:before {
   content: " ";
   background: #FFAE01;
@@ -610,6 +628,15 @@ h2:before {
   position: relative;
   top: 56px;
   z-index: -10;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  h2:before {
+    height: 16px;
+    top: 40px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 h3 {
@@ -666,6 +693,14 @@ header {
     width: 100%;
     margin-top: 24px;
     padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
   }
 }
 
@@ -682,8 +717,8 @@ header .logo img {
 
 @media screen and (min-width: 320px) and (orientation: portrait) {
   header .logo img {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -701,6 +736,14 @@ header .hi-there {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  header .hi-there {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 header .hi-there h1 {
@@ -796,8 +839,12 @@ header nav ul.nav-links a {
   .who {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 8px 1fr 8px;
-        grid-template-columns: 8px 1fr 8px;
+    margin-top: 24px;
+    height: auto;
+    -ms-grid-columns: 16px 1fr 16px;
+        grid-template-columns: 16px 1fr 16px;
+    -ms-grid-rows: 16px 1fr 48px 480px 24px 440px 16px;
+        grid-template-rows: 16px 1fr 48px 480px 24px 440px 16px;
   }
 }
 
@@ -814,8 +861,20 @@ header nav ul.nav-links a {
   width: 100%;
 }
 
-.who .subtitle h5 {
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .subtitle h2 {
+    text-align: center;
+  }
+}
+
+.who .subtitle .fun {
   width: 100%;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .subtitle .fun {
+    text-align: left;
+  }
 }
 
 .who .who-is {
@@ -827,6 +886,14 @@ header nav ul.nav-links a {
   grid-row: 4 / 5;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .who-is {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+}
+
 .who .who-is .desc {
   font-family: "Inter var";
   color: #333;
@@ -834,6 +901,14 @@ header nav ul.nav-links a {
   font-size: 1.2rem;
   line-height: 1.6rem;
   font-weight: 200;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .who-is .desc {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+  }
 }
 
 .who .who-is .desc strong {
@@ -848,6 +923,13 @@ header nav ul.nav-links a {
   color: #000;
   font-weight: bold;
   border-radius: 6px;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .who-is .desc a {
+    margin: 1px;
+    padding: 1px 8px;
+  }
 }
 
 .who .who-is .desc a:hover {
@@ -873,6 +955,17 @@ header nav ul.nav-links a {
           align-items: center;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .profile {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+}
+
 .who .profile img.avatar {
   width: 400px;
   height: auto;
@@ -888,6 +981,16 @@ header nav ul.nav-links a {
   -ms-grid-row-span: 3;
   grid-row: 1/4;
   margin-left: 16px;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .who .profile img.avatar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+  }
 }
 
 .who .profile span {
@@ -914,6 +1017,24 @@ header nav ul.nav-links a {
       grid-template-rows: 16px 1fr 48px 1fr 56px;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how {
+    -ms-grid-columns: 8px 1fr 8px;
+        grid-template-columns: 8px 1fr 8px;
+    -ms-grid-rows: 16px 80px 16px 1fr 32px;
+        grid-template-rows: 16px 80px 16px 1fr 32px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .subtitle {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+
 .how h2 {
   width: 120px;
 }
@@ -922,20 +1043,32 @@ header nav ul.nav-links a {
   left: 16px;
 }
 
-.how h5 {
+.how .fun {
   margin-top: 16px;
 }
 
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .fun {
+    width: 50%;
+    text-align: center;
+  }
+}
+
 .how .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-column: 2/7;
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
 }
 
 .how .skills ul.skill-list {
@@ -950,28 +1083,43 @@ header nav ul.nav-links a {
   color: #333;
 }
 
-.how .skills ul.skill-list li {
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.how .skills ul.skill-list li.skill {
   -ms-flex-preferred-size: 28%;
       flex-basis: 28%;
   font-family: "Inter var";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 8px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.how .skills ul.skill-list li h3.list {
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill {
+    margin: 32px 0;
+  }
+}
+
+.how .skills ul.skill-list li.skill h3.list {
   font-weight: bold;
   font-size: 24px;
   margin-top: 16px;
   margin-left: 24px;
 }
 
-.how .skills ul.skill-list li h3.list:before {
+.how .skills ul.skill-list li.skill h3.list:before {
   content: " ";
   width: 16px;
   height: 16px;
@@ -982,7 +1130,7 @@ header nav ul.nav-links a {
   left: -24px;
 }
 
-.how .skills ul.skill-list li .img {
+.how .skills ul.skill-list li.skill .img {
   width: 320px;
   height: 250px;
   background: white;
@@ -995,18 +1143,24 @@ header nav ul.nav-links a {
   border-radius: 24px;
 }
 
-.how .skills ul.skill-list li p.desc {
-  font-size: 16px;
+.how .skills ul.skill-list li.skill p.desc {
+  font-size: 1rem;
   font-weight: 200;
   margin: 16px 0;
   line-height: 18px;
 }
 
-.how .skills ul.skill-list li strong {
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill p.desc {
+    font-weight: 300;
+  }
+}
+
+.how .skills ul.skill-list li.skill strong {
   font-weight: bold;
 }
 
-.how .skills ul.skill-list li ul.skills-list {
+.how .skills ul.skill-list li.skill .skills-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1020,26 +1174,44 @@ header nav ul.nav-links a {
   margin-top: 8px;
 }
 
-.how .skills ul.skill-list li ul.skills-list li {
-  padding: 0;
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill .skills-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .how .skills ul.skill-list li.skill .skills-list a {
+    margin: 2px;
+    padding: 4px 8px;
+    background: rgba(255, 174, 1, 0.8);
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    width: auto;
+    display: block;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
-.how .skills ul.skill-list li ul.skills-list li a {
-  margin: 2px;
-  padding: 4px 8px;
-  background: rgba(255, 174, 1, 0.8);
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-  width: auto;
-  display: block;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+@media screen and (min-width: 320px) and (orientation: portrait) and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill .skills-list a {
+    padding: 16px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
+  }
 }
 
-.how .skills ul.skill-list li ul.skills-list li a:hover {
-  background: #2EB5FB;
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .how .skills ul.skill-list li.skill .skills-list a:hover {
+    background: #2EB5FB;
+  }
 }
 
 .what {
@@ -1227,6 +1399,13 @@ footer {
   -ms-grid-rows: 48px 1fr 1fr 1fr 64px 24px;
       grid-template-rows: 48px 1fr 1fr 1fr 64px 24px;
   text-align: center;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  footer {
+    -ms-grid-columns: 8px 1fr 8px;
+        grid-template-columns: 8px 1fr 8px;
+  }
 }
 
 footer h4 {
