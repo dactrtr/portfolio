@@ -311,25 +311,25 @@ header
           margin-top: 8px
           @include mobile-portrait
             flex-direction: row
-            a
-              margin: 2px
-              padding: 4px 8px
-              background: $yellow-80
-              text-decoration: none
-              color: $black
-              font-weight: bold
-              border-radius: 6px
-              width: auto
-              display: block
-              align-self: flex-start
-              @include mobile-portrait
-                padding: 16px
-                // min-width: 80px
-                flex-shrink: 1
-                flex-grow: 1
-                text-align: center
-              &:hover
-                background: $sky
+          a
+            margin: 2px
+            padding: 4px 8px
+            background: $yellow-80
+            text-decoration: none
+            color: $black
+            font-weight: bold
+            border-radius: 6px
+            width: auto
+            display: block
+            align-self: flex-start
+            flex-shrink: 1
+            flex-grow: 1
+            text-align: center
+            @include mobile-portrait
+              padding: 16px
+              
+            &:hover
+              background: $sky
 .what
   display: grid
   margin-top: 60px
