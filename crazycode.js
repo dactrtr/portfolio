@@ -34,44 +34,33 @@ headtitle.addEventListener('mouseleave',() =>{
 
 // Animations
 
-// gsap.registerPlugin(ScrollTrigger);
+// fondo 2B153C al body cuando se entra en algun proyecto
+gsap.registerPlugin(ScrollTrigger);
+// const what = document.querySelector(".what")
 
-// gsap.from('.notros-screen',{
+// ScrollTrigger.create({
+//   trigger:'.notros',
+//   toggleClass: 'dark-bg',
+//   start: "top center",
+//   end:"center center",
+//   markers: true,
+//   onEnter:()=> what.classList.add("dark-bg"),
+//   onLeave:()=> what.classList.remove("dark-bg"),
+
+// })
+
+
+// gsap.from('.what',{
 //   scrollTrigger: {
 //     trigger: '.notros',
 //     start: "top center",
 //     end:"center center",
-//     toggleActions:"restart pause reverse pause",
-//     // markers: true,
+//     // toggleActions:"restart pause reverse pause",
+//     markers: true,
+    
 //     scrub: true,
 //   },
-//   x: 200,
-//   opacity: 0,
-// });
 
+//   toggleClass:'dark-bg',
 
-// gsap.from('.notros',{
-//   scrollTrigger: {
-//     trigger: '.what',
-//     start: "top bottom",
-//     end:"top top",
-//     toggleActions:"restart pause reverse pause",
-//     // markers: true,
-//     scrub: true,
-//   },
-//   y: 200,
-//   opacity: 0.7,
-// });
-
-// gsap.from('.mck',{
-//   scrollTrigger: {
-//     trigger: '.notros',
-//     start: "bottom bottom",
-//     end:"bottom center",
-//     toggleActions:"restart pause reverse pause",
-//     // markers: true,
-//     scrub: true,
-//   },
-//   y: 200,
-//   opacity: 0.7,
 // });
