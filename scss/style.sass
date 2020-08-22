@@ -89,12 +89,16 @@ header
     display: flex
     flex-direction: column
     height: auto
-  .logo
-    flex: .5
-    img
+  .logo 
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
       width: 72px
       height: 72px
+      margin-right: 48px
       @include mobile-portrait
+        margin: 0
         width: 80px
         height: 80px
   .hi-there
@@ -216,7 +220,7 @@ header
       display: grid
       grid-column: 1/2
       grid-row: 1/4
-      margin-left: 16px
+      border-radius: 8px
       @include mobile-portrait
         width: 100%
         display: flex
@@ -364,24 +368,6 @@ header
       margin: 32px 0px
       box-shadow: $shadow
       overflow: hidden
-      .blob-1
-        grid-column: 1/8
-        grid-row: 1/4
-        width: 150%
-        height: auto
-        align-self: flex-end
-        justify-self: flex-end
-        z-index: 0
-        opacity: 0.5
-      .blob-2
-        grid-column: -1/-8
-        grid-row: 1/4
-        width: 150%
-        height: auto
-        align-self: flex-end
-        justify-self: flex-end
-        z-index: 0
-        opacity: 0.5
       .screen
         grid-column: 7/17
         grid-row: 3/6
@@ -398,7 +384,7 @@ header
         .p-name
           color: $white
           font-size: 36px
-          text-transform: uppercase
+          // text-transform: uppercase 
           &:after
             content: " "
             width: 32px
@@ -506,7 +492,9 @@ footer
     justify-content: center
     align-items: center
 // FX
-
+.dark-bg
+  background: #2B153C
+  animation: dark 1s ease
 .glitch // glitch Text
   display: block
   animation-name: glitch-anim-text
@@ -515,7 +503,11 @@ footer
   animation-timing-function: linear
   animation-iteration-count: infinite
   animation-delay: .5s
-
+@keyframes dark
+  0%
+    background: #ffffff
+  100%
+    background: #2B153C
 @keyframes glitch-anim-text 
   0%
     transform: translate3d(0,0,0) 
