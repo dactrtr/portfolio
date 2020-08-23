@@ -803,9 +803,9 @@ header nav ul.nav-links {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1234,12 +1234,56 @@ header nav ul.nav-links a {
   margin-top: 60px;
   -ms-grid-columns: 8px 1fr 8px 1fr 8px 1fr 8px;
       grid-template-columns: 8px 1fr 8px 1fr 8px 1fr 8px;
+  height: 100vh;
+  -ms-grid-rows: 16px 200px 8px 470px 16px;
+      grid-template-rows: 16px 200px 8px 470px 16px;
 }
 
-.what h2:before {
+.what .subtitle {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.what .subtitle h2:before {
   width: 98px;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.what .construmarket {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.what .construmarket p.desc {
+  font-size: 1rem;
+  font-weight: 200;
+  margin: 16px 0;
+  line-height: 18px;
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  .what .construmarket p.desc {
+    font-weight: 300;
+  }
 }
 
 .what ul.projects {

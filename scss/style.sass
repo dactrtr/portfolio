@@ -133,7 +133,7 @@ header
       display: none
     ul.nav-links
       display: flex
-      flex-direction: row
+      flex-direction: row-reverse
       justify-content: space-between
       width: 300px
       a
@@ -342,11 +342,29 @@ header
   display: grid
   margin-top: 60px
   grid-template-columns: 8px 1fr 8px 1fr 8px 1fr 8px
-  // grid-template-rows: 16px auto 8px 470px 16px
-  h2
-    &:before
-      width: 98px
-      justify-self: center
+  height: 100vh
+  grid-template-rows: 16px 200px 8px 470px 16px //meanwhile
+  .subtitle
+    justify-content: start
+    h2
+      &:before
+        width: 98px
+        justify-self: center
+
+  .construmarket
+    grid-column: 4/5
+    grid-row: 4/5
+    align-items: center
+    justify-content: center
+    display: flex
+    flex-direction: column
+    p.desc
+      font-size: 1rem
+      font-weight: 200
+      margin: 16px 0
+      line-height: 18px
+      @include mobile-portrait
+        font-weight: 300
   ul.projects
     display: grid
     grid-column: 2 / 7
