@@ -1232,17 +1232,22 @@ header nav ul.nav-links a {
   display: -ms-grid;
   display: grid;
   margin-top: 60px;
-  -ms-grid-columns: 8px 1fr 8px 1fr 8px 1fr 8px;
-      grid-template-columns: 8px 1fr 8px 1fr 8px 1fr 8px;
-  height: 100vh;
-  -ms-grid-rows: 16px 200px 8px 470px 16px;
-      grid-template-rows: 16px 200px 8px 470px 16px;
+  -ms-grid-columns: 0px 1fr 8px 1fr 8px 1fr 0px;
+      grid-template-columns: 0px 1fr 8px 1fr 8px 1fr 0px;
+  -ms-grid-rows: 16px auto 8px auto 16px;
+      grid-template-rows: 16px auto 8px auto 16px;
+  background: #343551;
 }
 
 .what .subtitle {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  color: #ffffff;
+}
+
+.what .subtitle h2 {
+  color: #ffffff;
 }
 
 .what .subtitle h2:before {
@@ -1308,16 +1313,53 @@ header nav ul.nav-links a {
       grid-template-rows: 54px 0.5fr 1fr 1fr 1fr 32px;
   -ms-grid-columns: 144px (1fr)[15];
       grid-template-columns: 144px repeat(15, 1fr);
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#252525));
-  background: linear-gradient(0deg, #000000 0%, #252525 100%);
-  border-radius: 40px;
-  border: 6px solid #F6F3E7;
-  height: 95vh;
-  width: 95vw;
-  margin: 32px 0px;
-  -webkit-box-shadow: rgba(144, 115, 150, 0.3) 0px 0px 10px;
-          box-shadow: rgba(144, 115, 150, 0.3) 0px 0px 10px;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px 0px;
   overflow: hidden;
+}
+
+.what ul.projects .briefcase.notros .bg-notros {
+  -webkit-clip-path: polygon(0 0, 100% 0, 67% 65%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 67% 65%, 0% 100%);
+}
+
+.what ul.projects .briefcase.notros .notros-screen {
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+}
+
+.what ul.projects .briefcase.mck .fun {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 8;
+  grid-column: 8/16;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  color: #3C4145;
+}
+
+.what ul.projects .briefcase.mck .mck-screens {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 8;
+  grid-column: 8/16;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+  margin-left: 0;
+}
+
+.what ul.projects .briefcase.mck .bg-mck {
+  -webkit-clip-path: polygon(70% 0, 100% 0%, 100% 100%, 23% 100%);
+          clip-path: polygon(70% 0, 100% 0%, 100% 100%, 23% 100%);
 }
 
 .what ul.projects .briefcase .screen {
@@ -1332,6 +1374,18 @@ header nav ul.nav-links a {
       align-self: flex-end;
   margin-left: 124px;
   z-index: 3;
+}
+
+.what ul.projects .briefcase .bgclip {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 17;
+  grid-column: 1/18;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1/7;
+  height: 100%;
 }
 
 .what ul.projects .briefcase .header {
