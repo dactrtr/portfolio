@@ -1256,6 +1256,10 @@ header nav ul.nav-links a {
       justify-self: center;
 }
 
+.what .subtitle .fun {
+  margin-top: 4px;
+}
+
 .what .construmarket {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
@@ -1298,7 +1302,8 @@ header nav ul.nav-links a {
   -ms-grid-column-span: 5;
   grid-column: 2 / 7;
   -ms-grid-row: 4;
-      grid-row-start: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
   color: #ffffff;
   margin-top: 32px;
   height: auto;
@@ -1333,9 +1338,9 @@ header nav ul.nav-links a {
   -ms-grid-column: 8;
   -ms-grid-column-span: 8;
   grid-column: 8/16;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  grid-row: 5/6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: end;
@@ -1345,21 +1350,93 @@ header nav ul.nav-links a {
 }
 
 .what ul.projects .briefcase.mck .mck-screens {
+  width: 100%;
+  height: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-column: 8;
   -ms-grid-column-span: 8;
   grid-column: 8/16;
   -ms-grid-row: 2;
   -ms-grid-row-span: 3;
   grid-row: 2/5;
-  margin-left: 0;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+.what ul.projects .briefcase.mck .mck-screens .screen-1 {
+  width: 680px;
+  height: auto;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 64px;
+  left: 112px;
+}
+
+.what ul.projects .briefcase.mck .mck-screens .screen-2 {
+  width: 680px;
+  height: auto;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 112px;
+  left: 72px;
+}
+
+.what ul.projects .briefcase.mck .mck-screens .screen-3 {
+  width: 680px;
+  height: auto;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 170px;
+  left: 30px;
 }
 
 .what ul.projects .briefcase.mck .bg-mck {
   -webkit-clip-path: polygon(70% 0, 100% 0%, 100% 100%, 23% 100%);
           clip-path: polygon(70% 0, 100% 0%, 100% 100%, 23% 100%);
+}
+
+.what ul.projects .briefcase.braveup .bg-braveup {
+  -webkit-clip-path: polygon(0 0, 68% 0, 100% 100%, 30% 100%);
+          clip-path: polygon(0 0, 68% 0, 100% 100%, 30% 100%);
+}
+
+.what ul.projects .briefcase.braveup .brave-screens {
+  position: relative;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 8;
+  grid-column: 8/16;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2/6;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.what ul.projects .briefcase.braveup .brave-screens .braveup-screen-1 {
+  position: absolute;
+  top: 25%;
+  width: auto;
+  height: 556px;
+  right: 170px;
+}
+
+.what ul.projects .briefcase.braveup .brave-screens .braveup-screen-2 {
+  position: absolute;
+  top: 20%;
+  width: auto;
+  height: 640px;
 }
 
 .what ul.projects .briefcase .screen {
@@ -1377,8 +1454,8 @@ header nav ul.nav-links a {
 }
 
 .what ul.projects .briefcase .bgclip {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   -ms-grid-column: 1;
   -ms-grid-column-span: 17;
   grid-column: 1/18;
