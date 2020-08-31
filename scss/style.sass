@@ -341,15 +341,19 @@ header
 .what
   display: grid
   margin-top: 60px
-  grid-template-columns: 8px 1fr 8px 1fr 8px 1fr 8px
-  height: 100vh
-  grid-template-rows: 16px 200px 8px 470px 16px //meanwhile
+  grid-template-columns: 0px 1fr 8px 1fr 8px 1fr 0px
+  grid-template-rows: 16px auto 8px auto 16px //meanwhile
+  background: #343551
   .subtitle
     justify-content: start
+    color: $white
     h2
+      color: $white
       &:before
         width: 98px
         justify-self: center
+    .fun
+      margin-top: 4px
 
   .construmarket
     grid-column: 4/5
@@ -368,7 +372,7 @@ header
   ul.projects
     display: grid
     grid-column: 2 / 7
-    grid-row-start: 4
+    grid-row: 4/5
     color: $white
     margin-top: 32px
     height: auto
@@ -378,14 +382,78 @@ header
       display: grid
       grid-template-rows: 54px 0.5fr 1fr 1fr 1fr 32px
       grid-template-columns: 144px repeat(15, 1fr)
-      background: linear-gradient(0deg, #000000 0%, #252525 100%)
-      border-radius: 40px
-      border: 6px solid #F6F3E7
-      height: 95vh
-      width: 95vw
-      margin: 32px 0px
-      box-shadow: $shadow
+      height: 100vh
+      width: 100vw
+      margin: 0px 0px
       overflow: hidden
+      &.notros
+        .bg-notros
+          clip-path: polygon(0 0, 100% 0, 67% 65%, 0% 100%)
+        .notros-screen
+          filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.5))
+      &.mck
+        .fun
+          grid-column: 8/16
+          grid-row: 3/5
+          justify-self: center
+          align-self: end
+          color: $grey
+        .mck-screens
+          width: 100%
+          height: 100%
+          align-self: center
+          justify-content: center
+          grid-column: 8/16
+          grid-row: 2/5
+          z-index: 2
+          overflow: hidden
+          position: relative
+          .screen-1
+            width: 680px
+            height: auto
+            border-radius: 8px
+            filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.5))
+            position: absolute
+            top: 64px
+            left: 112px
+          .screen-2
+            width: 680px
+            height: auto
+            border-radius: 8px
+            filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.5))
+            position: absolute
+            top: 112px
+            left: 72px
+          .screen-3
+            width: 680px
+            height: auto
+            border-radius: 8px
+            filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.5))
+            position: absolute
+            top: 170px
+            left: 30px
+        .bg-mck
+          clip-path: polygon(70% 0, 100% 0%, 100% 100%, 23% 100%)
+      &.braveup
+        .bg-braveup
+          clip-path: polygon(0 0, 68% 0, 100% 100%, 30% 100%)
+        .brave-screens
+          position: relative
+          grid-column: 8/16
+          grid-row: 2/6
+          z-index: 2 
+          overflow: hidden
+          .braveup-screen-1
+            position: absolute
+            top: 25%
+            width: auto
+            height: 556px
+            right: 170px
+          .braveup-screen-2
+            position: absolute
+            top: 20%
+            width: auto
+            height: 640px
       .screen
         grid-column: 7/17
         grid-row: 3/6
@@ -393,8 +461,11 @@ header
         align-self: flex-end
         margin-left: 124px
         z-index: 3
-      .notros-screen
-        
+      .bgclip
+        filter: blur(10px)
+        grid-column: 1/18
+        grid-row: 1/7
+        height: 100%
       .header
         grid-row: 2 / 3
         grid-column: 2 / 15
