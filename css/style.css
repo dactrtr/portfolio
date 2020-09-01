@@ -1138,7 +1138,7 @@ header nav ul.nav-links a {
   left: -24px;
 }
 
-.how .skills ul.skill-list li.skill .img {
+.how .skills ul.skill-list li.skill .img svg {
   width: 320px;
   height: 250px;
   background: white;
@@ -1151,7 +1151,7 @@ header nav ul.nav-links a {
 }
 
 @media screen and (min-width: 320px) and (orientation: portrait) {
-  .how .skills ul.skill-list li.skill .img {
+  .how .skills ul.skill-list li.skill .img svg {
     width: 160px;
     height: auto;
   }

@@ -1,6 +1,15 @@
 doctype html 
 html(lang="en")
   head
+    script.
+        (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1968811,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     title How Dactrtr rocks?
     meta(name='title' content='How Dactrtr Rocks')
     meta(name='description' content="Hi, I'm Sebastián Zúñiga, UI designer and illustrator, this is my portfolio, kinda.")
@@ -18,15 +27,7 @@ html(lang="en")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description', content='Some description')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    script.
-      (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:1968811,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    
   link(rel="stylesheet", href="css/style.css")
   link(rel='shortcut icon' href='favicon.ico')
   //- Hello Hello!
@@ -74,7 +75,8 @@ html(lang="en")
       .skills
         ul.skill-list
           li.skill 
-            img.img(src="img/ui.svg" alt="Skeleton hand with a phone illustration")
+            .img
+              include svg/ui-illu.pug
             h3.list UI Design
             p.desc Sketch is my main tool at the moment, to make delightful and useful groups of pixels for those high end pieces of glass that's lives in everyone pockets, you know smartphones.
             p #[strong Current tools]:
@@ -83,7 +85,8 @@ html(lang="en")
               a(href="https://www.abstract.com/") Abstract
               a(href="https://principleformac.com/") Principle
           li.skill
-            img.img(src="img/illu.svg" alt="Skeleton hadn with and apple pencil swirling  illustration")
+            .img
+              include svg/illu-illu.pug
             h3.list Illustration
             p.desc Sometimes I like to draw stuff, and pretty much in every project try to add some fun little character to give a little more "wowowowowo effect".
             p #[strong Current tools]:
@@ -91,8 +94,9 @@ html(lang="en")
               a(href="https://www.jetpens.com/TRAVELER-S-COMPANY-TRAVELER-S-notebook-Refill-003-Passport-Size-Blank/pd/13639") Notebook
               a(href="https://www.muji.us/store/gel-ink-ballpoint-pen-cap-type-0-38mm-black-4550002794262.html") Gel 0.38
               a(href="https://procreate.art/") Procreate
-          li.skill 
-            img.img(src="img/code.svg" alt="Skeleton hand in a rocking pose with a terminal screen around, like a flag illustration")
+          li.skill
+            .img
+                include svg/code-illu.pug 
             h3.list Coding
             p.desc Yes, I like to code. I built my first website when I was 14 (21 years ago) in plain HTML and since then never stopped to read and learn about "coding", actually I'm working using Vue and learning SwiftUI.
             p #[strong Current tools]:
@@ -223,7 +227,7 @@ html(lang="en")
     <!-- Hotjar Tracking Code for https://dactrtr.rocks/portfolio/ -->
     
     
-    script(src='crazycode.js')
+    //- script(src='crazycode.js')
     
 
           
