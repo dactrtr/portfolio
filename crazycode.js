@@ -36,31 +36,31 @@ headtitle.addEventListener('mouseleave',() =>{
 
 // fondo 2B153C al body cuando se entra en algun proyecto
 gsap.registerPlugin(ScrollTrigger);
-// const what = document.querySelector(".what")
+const what = document.querySelector(".what")
 
-// ScrollTrigger.create({
-//   trigger:'.notros',
-//   toggleClass: 'dark-bg',
-//   start: "top center",
-//   end:"center center",
-//   markers: true,
-//   onEnter:()=> what.classList.add("dark-bg"),
-//   onLeave:()=> what.classList.remove("dark-bg"),
+ScrollTrigger.create({
+  trigger:'.notros',
+  toggleClass: 'dark-bg',
+  start: "top center",
+  end:"center center",
+  markers: true,
+  onEnter:()=> what.classList.add("dark-bg"),
+  onLeave:()=> what.classList.remove("dark-bg"),
 
-// })
+})
 
 
-// gsap.from('.what',{
-//   scrollTrigger: {
-//     trigger: '.notros',
-//     start: "top center",
-//     end:"center center",
-//     // toggleActions:"restart pause reverse pause",
-//     markers: true,
+gsap.from('.what',{
+  scrollTrigger: {
+    trigger: '.notros',
+    start: "top center",
+    end:"center center",
+    toggleActions:"restart pause reverse pause",
+    markers: true,
     
-//     scrub: true,
-//   },
+    scrub: true,
+  },
 
-//   toggleClass:'dark-bg',
+  toggleClass:'dark-bg',
 
-// });
+});
